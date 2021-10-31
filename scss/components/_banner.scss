@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+.banner {
+  background: url(./assets/images/photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.information {
+  text-align: center;
+  color: #fff;
+  margin-top: -185px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold; 
+    letter-spacing: 6.5px;
+    font-size: 145px;
+    margin-bottom: 35px;
+    animation: animationTop 2s ease;
+  }
+  .subtitle{
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 400;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+  .paragraph{
+    letter-spacing: 1.5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+}
+.burger {
+  cursor: pointer;
+  position: absolute;
+  left: 45px;
+  top: 45px;
+  div {
+    width: 33px;
+    height: 2.3px;
+    margin: 5px 0px;
+    background: rgb(231, 231, 231);
+  }
+}
+.panel-links {
+  z-index: 16;
+  display: none;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  color: #000;
+  flex-direction: column;
+  animation: panelopen 1s forwards;
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 25px;
+    width: 22px;
+    height: 22px;
+    &:before,
+    &:after {
+      position: absolute;
+      content: " ";
+      height: 23px;
+      width: 2px;
+      background-color: #000;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  .info {
+    margin-left: 25px;
+    margin-top: 55px;
+    .info__title {
+      font-size: 30px;
+    }
+    .links {
+      margin-top: 45px;
+      .link {
+        a {
+          transition: .3s;
+          text-decoration: none;
+          color: #000;
+          &:hover{
+            color: rgb(95, 94, 94);
+          }
+        }
+        font-size: 20px;
+        list-style: none;
+        margin: 20px 0px;
+      }
+    }
+  }
+}
+@keyframes panelopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 320px;
+  }
+}
+@keyframes adaptivepanelopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes panelclose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animationTop {
+  from {
+   transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@media (max-width: 1400px) {
+  .information {
+    .title {
+      margin-bottom: 32px;
+      letter-spacing: 6.3px;
+      font-size: 120px;
+    }
+  }
+}
+@media (max-width: 1183px) {
+  .information {
+    text-align: center;
+    align-items: center;
+    .title {
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      font-size: 115px;
+    }
+    .paragraph{
+      width: 90%;
+    }
+  }
+  .panel-links {
+    width: 220px;
+    height: 100vh;
+    .info {
+      margin-top: 65px;
+      .info__title  {
+        font-size: 25px;
+      }
+      .links {
+        margin-top: 30px;
+        .link {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .information {
+    .title {
+      margin-bottom: 27px;
+      letter-spacing: 6px;
+     font-size: 105px;
+    }
+  }
+}
+@media (max-width: 880px) {
+  .information {
+    .title {
+      margin-bottom: 24px;
+      letter-spacing: 5px;
+      font-size: 90px;
+    }
+  }
+}
+@media (max-width: 793px) {
+  .information {
+    margin-top: -25px;
+    .subtitle{
+      font-size: 35px;
+    }
+    .title {
+      margin-bottom: 20px;
+      letter-spacing: 5px;
+      font-size: 70px;
+    }
+  }
+}
+@media (max-width: 739px) {
+  .burger {
+    right: 55px;
+    top: 55px;
+    div {
+      width: 25px;
+      height: 2px;
+      margin: 5px 0px;
+      background: #fff;
+    }
+  }
+  .information {
+    margin-top: -65px;
+    .title {
+      margin-bottom: 17px;
+      letter-spacing: 4px;
+      font-size: 60px;
+    }
+  }
+  .panel-links {
+    animation: adaptivepanelopen 1s ease;
+    width: 100%;
+    height: 100vh;
+    .close-btn {
+      right: 15px;
+      top: 25px;
+      width: 25px;
+      height: 25px;
+      &:before,
+      &:after {
+        position: absolute;
+        content: " ";
+        height: 25px;
+        width: 2px;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+    .info {
+      margin-top: 75px;
+      .info__title  {
+        font-size: 30px;
+      }
+      .links {
+        margin-top: 30px;
+        .link {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .burger {
+    right: 35px;
+    top: 55px;
+  }
+  .information {
+    margin-top: -85px;
+    .subtitle{
+      font-size: 25px;
+    }
+    .title {
+      margin-bottom: 15px;
+      letter-spacing: 4px;
+      font-size: 55px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .burger {
+    right: 35px;
+    top: 65px;
+  }
+  .information {
+    margin-top: -105px;
+    .title {
+      margin-bottom: 13px;
+      letter-spacing: 4px;
+      font-size: 50px;
+      animation: none;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .information {
+    margin-top: -105px;
+    .title {
+      margin-bottom: 13px;
+      letter-spacing: 4px;
+      font-size: 40px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .panel-links {
+    .close-btn {
+      right: 20px;
+      top: 25px;
+      width: 20px;
+      height: 20px;
+      &:before,
+      &:after {
+        position: absolute;
+        content: " ";
+        height: 20px;
+        width: 2px;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+    .info {
+      margin-top: 75px;
+      .info__title  {
+        font-size: 25px;
+      }
+      .links {
+        margin-top: 30px;
+        .link {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  .burger {
+    right: 25px;
+    top: 35px;
+  }
+  .information {
+    margin-top: -105px;
+    .subtitle{
+      font-size: 20px;
+    }
+    .title {
+      margin-bottom: 8px;
+      font-size: 25px;
+    }
+  }
+}

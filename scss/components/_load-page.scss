@@ -1,0 +1,56 @@
+.text{
+    color: rgb(41, 41, 41);
+    text-align: center;
+    font-size: 70px;
+}
+.subtext{
+    color: rgb(41, 41, 41);
+    font-size: 60px;
+    opacity: 0;
+    text-align: center;
+   margin-top: 10px;
+}
+.loader-frame{
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    position: relative;
+}
+@keyframes fadeout{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+@keyframes fadein{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media (max-width: 1389px){
+    .text{
+        font-size: 50px;
+    }
+    .subtext{
+        font-size: 40px;
+    }
+}
+@media (max-width: 868px){
+    .text{
+        font-size: 40px;
+    }
+    .subtext{
+        font-size: 30px;
+    }
+}
+@media (max-width: 450px){
+    .text{
+        font-size: 30px;
+    }
+    .subtext{
+        font-size: 20px;
+    }
+}

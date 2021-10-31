@@ -1,0 +1,91 @@
+.skills{
+    display: flex;
+   background: $c-back;
+    flex-direction: column;
+    z-index: 1;
+    color: #000;
+    align-items: center;
+    .info{
+        margin-bottom: 50px;
+        margin-top: 45px;
+        text-align: left;
+        .list{
+            display: flex;
+            width: 500px;
+            justify-content: space-between;
+            .item{
+                &::before{
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid #000;
+                    transition: .3s;
+                    cursor: pointer;
+                    height: 30px;
+                    font-size: 15px;
+                    border-radius: 100%;
+                    content: "\ea10";
+                    font-family: 'icomoon';
+                    // position: absolute;
+                }
+                &:hover::before{
+                    color: #fff;
+                    background: #000;
+                }
+            }
+            cursor: pointer;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 36px 0px;
+        }
+    }
+}
+@keyframes animatedScroll{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media (max-width: 654px){
+    .skills{
+        .title{
+            font-size: 35px;
+        }
+        .info{
+            .list{
+                width: 400px;
+        }
+        }
+    }
+}
+@media (max-width: 469px){
+    .skills{
+        .title{
+            font-size: 27px;
+        }
+        .info{
+            .list{
+                .item{
+                    &::before{
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid #000;
+                        transition: .3s;
+                        cursor: pointer;
+                        height: 20px;
+                        font-size: 13px;
+                    }
+                }
+                font-size: 16px;
+                width: 280px;
+        }
+        }
+    }
+}

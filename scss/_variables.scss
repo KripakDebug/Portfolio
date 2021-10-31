@@ -1,0 +1,80 @@
+// COLORS
+$c-back: rgb(230, 228, 228);
+$c-blue: blue;
+$c-white: #fff;
+
+// Global setting 
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.title{
+    margin-top: 75px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 200;
+    font-size: 45px;
+}
+
+@media (max-width: 654px){
+        .title{
+            font-size: 35px;
+        }
+}
+@media (max-width: 469px){
+        .title{
+            font-size: 27px;
+        }
+}
+
+
+.wrapper{
+    background: $c-back;
+display: none;
+}
+.hidden{
+    overflow: hidden;
+}
+.body-shadow{
+    z-index: 3;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.466);
+    }
+}
+// Scroll Bar
+::selection {
+    background: #bcbdbd; 
+    }
+    
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444343;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #939393;
+    border-radius: 8px;
+    border: 3px solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
+
+
+
+ 

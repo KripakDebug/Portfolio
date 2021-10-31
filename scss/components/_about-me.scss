@@ -1,0 +1,226 @@
+.about{
+    display: flex;
+    z-index: 1;
+    position: relative;
+    background: $c-back;
+    justify-content: center;
+    align-items: center;
+   .about__content {
+       display: flex;
+       align-items: center;
+       margin: 130px 0px;
+       margin-bottom: 150px;
+   }
+   .description{
+       color: #000;
+       opacity: 0;
+       margin-right: 75px;
+       .description__title{
+           font-size: 35px;
+           letter-spacing: 3px;
+           hr{
+               background: #000;
+               width: 46%;
+               border: 0.5px solid #000;
+           }
+       }
+       .paragraph{
+           font-size: 16px;
+           letter-spacing: 2.3px;
+           line-height: 30px;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 550px;
+       }
+   }
+   .photo{
+    opacity: 0;
+       cursor: pointer;
+       img{
+           border-radius: 100%;
+           width: 450px;
+           height: 450px;
+       }
+   }
+}
+
+@keyframes aboutscroll{
+    from{
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes photoscroll{
+    from{
+        transform: translateX(45px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@media (max-width: 1187px) {
+  .about{
+    .description{
+        margin-right: 55px;
+        .description__title{
+            font-size: 28px;
+        }
+        .paragraph{
+            font-size: 16px;
+            letter-spacing: 2px;
+            line-height: 30px;
+            width: 600px;
+        }
+    }
+    .photo{
+        img{
+            width: 350px;
+            height: 350px;
+        }
+    }
+  }
+}
+@media (max-width: 1164px) {
+    .about{
+      .description{
+          margin-right: 35px;
+          .description__title{
+              font-size: 25px;
+          }
+          .paragraph{
+              font-size: 14px;
+              letter-spacing: 2px;
+              line-height: 30px;
+              width: 600px;
+          }
+      }
+      .photo{
+          img{
+              width: 350px;
+              height: 350px;
+          }
+      }
+    }
+  }
+  @media (max-width: 1065px) {
+    .about{
+        .about__content{
+            flex-direction: column;
+        }
+      .description{
+          margin-right: 0px;
+          margin-bottom: 45px;
+          .description__title{
+              font-size: 25px;
+          }
+          .paragraph{
+              font-size: 14px;
+              letter-spacing: 2px;
+              line-height: 30px;
+              width: 600px;
+          }
+      }
+      .photo{
+          img{
+              width: 400px;
+              height: 400px;
+          }
+      }
+    }
+  }
+  @media (max-width: 675px) {
+    .about{
+      .description{
+           margin-left: 35px;
+           margin-bottom: 55px;
+           .description__title{
+              font-size: 23px;
+          }
+          .paragraph{
+              font-size: 14px;
+              letter-spacing: 2px;
+              line-height: 27px;
+              width: 95%;
+          }
+      }
+      .photo{
+          img{
+              width: 350px;
+              height: 350px;
+          }
+      }
+    }
+  }
+  @media (max-width: 475px) {
+    .about{
+      .description{
+        margin-left: 0px;
+          width: 95%;
+          .description__title{
+              font-size: 20px;
+          }
+          .paragraph{
+              font-size: 14px;
+              letter-spacing: 2px;
+              line-height: 23px;
+              width: auto;
+          }
+      }
+      .photo{
+          img{
+              width: 350px;
+              height: 350px;
+          }
+      }
+    }
+  }
+  @media (max-width: 395px) {
+    .about{
+      .description{
+        .description__title{
+              font-size: 16px;
+          }
+          .paragraph{
+              font-size: 13px;
+              letter-spacing: 2px;
+              line-height: 20px;
+              width: auto;
+          }
+      }
+      .photo{
+          img{
+              
+              width: 300px;
+              height: 300px;
+          }
+      }
+    }
+  }
+  @media (max-width: 355px) {
+    .about{
+      .description{
+        .description__title{
+              font-size: 15px;
+          }
+          .paragraph{
+              font-size: 12px;
+              letter-spacing: 2px;
+              line-height: 20px;
+              width: auto;
+          }
+      }
+      .photo{
+          img{
+              
+              width: 290px;
+              height: 290px;
+          }
+      }
+    }
+  }
+  
