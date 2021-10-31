@@ -4,8 +4,13 @@ let panel = document.querySelector('.panel-links');
 let closepanel = document.querySelector('.close-btn');
 const preload = document.querySelector('#preload');
 const skills = document.querySelector('.skills');
+const nav = document.querySelector('.nav-wrapper');
 const body = document.body;
 let links = document.querySelectorAll('#link');
+const burgerItem = document.querySelector('#burgerItem');
+const burgerItem1 = document.querySelector('#burgerItem-1');
+const burgerItem2 = document.querySelector('#burgerItem-2');
+let navStyle = nav.style;
 const wrapper = document.querySelector('.wrapper');
  function load(){
      myVar = setTimeout(hiding, 2000);
@@ -49,7 +54,7 @@ links.forEach(link => {
 });
 
 burger.addEventListener('click', () => {
-    panel.style.position = 'absolute';
+    panel.style.position = 'fixed';
     panel.style.display = 'flex';
     body.classList.add('body-shadow');
     body.classList.add('hidden');
@@ -74,14 +79,88 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollwindow = window.scrollY;
         let heightAbout = about.offsetHeight / 3;
         let skillsHeight = skills.offsetHeight / 4;
+        let heightBanner = banner.offsetHeight / 2;
         if(scrollwindow >= heightAbout){
             aboutdescription.style.animation = 'aboutscroll 3s forwards';
             aboutphoto.style.animation = 'photoscroll 2s forwards';
         };
+        
         if(scrollwindow >= skillsHeight){
             skillsTitle.style.animation = 'animatedScroll 3s forwards';
             skillsLists.style.animation = 'animatedScroll 4s forwards';
         };
-    });
+        if(scrollwindow >= heightBanner){
+            navStyle.width = '100%';
+            navStyle.backgroundColor = '#fff';
+            navStyle.display = 'flex';
+            navStyle.justifyContent = 'left';
+            navStyle.alignItems = 'center';
+        }
+        else{
+            navStyle.width = '100%';
+            navStyle.backgroundColor = 'none';
+            navStyle.display = 'flex';
+            navStyle.justifyContent = 'left';
+            navStyle.alignItems = 'center';
+            }
+
+    })
+    
 });
 
+function scrollAdaptive(){
+    if (window.matchMedia("(max-width: 400px)").matches){
+        
+        window.addEventListener('scroll', () => {
+          const scrollwindow = window.scrollY;
+          const banner = document.querySelector('#banner');
+          let heightBanner = banner.offsetHeight / 2;
+          if(scrollwindow >= heightBanner){
+              navStyle.width = '100%';
+              navStyle.backgroundColor = '#fff';
+              navStyle.top = 0;
+              burgerItem2.style.backgroundColor = '#000';
+              burgerItem1.style.backgroundColor = '#000';
+              burgerItem.style.backgroundColor = '#000';
+              navStyle.zIndex = '10';
+              burger.style.top = 'auto';
+              navStyle.height = '50px';
+              navStyle.position = 'fixed';
+              navStyle.display = 'flex';
+              navStyle.justifyContent = 'left';
+              navStyle.alignItems = 'center';
+          }
+      
+      });
+          }
+          else{
+              return
+          }
+}
+scrollAdaptive();
+// if (window.matchMedia("(max-width: 400px)").matches) {
+//     if(scrollwindow >= heightBanner){
+//         navStyle.width = '100%';
+//         navStyle.backgroundColor = '#fff';
+//         navStyle.top = 0;
+//         burgerItem2.style.backgroundColor = '#000';
+//         burgerItem1.style.backgroundColor = '#000';
+//         burgerItem.style.backgroundColor = '#000';
+//         navStyle.zIndex = '10';
+//         burger.style.top = 'auto';
+//         navStyle.height = '50px';
+//         navStyle.position = 'fixed';
+//         navStyle.display = 'flex';
+//         navStyle.justifyContent = 'left';
+//         navStyle.alignItems = 'center';
+//     }
+
+//   } 
+
+
+//   window.addEventListener('scroll', () => {
+//     const scrollwindow = window.scrollY;
+//     const banner = document.querySelector('#banner');
+//     let heightBanner = banner.offsetHeight / 2;
+
+// });
