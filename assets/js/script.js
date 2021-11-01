@@ -1,20 +1,16 @@
 let myVar;
-let burger = document.querySelector('.burger');
-let panel = document.querySelector('.panel-links');
-let closepanel = document.querySelector('.close-btn');
+const burger = document.querySelector('.burger');
+const panel = document.querySelector('.panel-links');
+const closepanel = document.querySelector('.close-btn');
 const preload = document.querySelector('#preload');
-const skills = document.querySelector('.skills');
-let banner = document.querySelector('#banner');
-let about = document.querySelector('#about');
-let works = document.querySelector('#works');
-let contact = document.querySelector('#contact')
+const banner = document.querySelector('#banner');
 const nav = document.querySelector('.nav-wrapper');
-let body = document.body;            
-let links = document.querySelectorAll('#link');
+const body = document.body;            
+const links = document.querySelectorAll('#link');
 const burgerItem = document.querySelector('#burgerItem');
 const burgerItem1 = document.querySelector('#burgerItem-1');
 const burgerItem2 = document.querySelector('#burgerItem-2');
-let navStyle = nav.style;
+const navStyle = nav.style;
 const wrapper = document.querySelector('#wrapper');
  function load(){
      myVar = setTimeout(hiding, 2000);
@@ -38,7 +34,6 @@ function showPage(){
     document.getElementById("text").style.display = "none";
 
 }
-
 function hiding(){
     document.getElementById("text").style.animation = "fadeout 1s ease";
 }
@@ -56,13 +51,11 @@ links.forEach(link => {
         });
     });
 });
-
 burger.addEventListener('click', () => {
     panel.style.position = 'fixed';
     panel.style.display = 'flex';
     body.classList.add('body-shadow');
     body.classList.add('hidden');
-
 });
 closepanel.addEventListener('click', () => {
     panel.style.display = 'none';
@@ -71,20 +64,19 @@ closepanel.addEventListener('click', () => {
     body.classList.remove('hidden');
 });
 
-
 // Scroll animeted
 document.addEventListener('DOMContentLoaded', () => {
-    let about = document.querySelector('#about');
-    let aboutphoto = document.querySelector('#photo');
-    let skills = document.querySelector('#skills');
-    let skillsTitle = document.querySelector('#skills-title');
-    let skillsLists = document.querySelector('#skills-lists');
-    let aboutdescription = document.querySelector('#descrip-about');
+    const about = document.querySelector('#about');
+    const aboutphoto = document.querySelector('#photo');
+    const skills = document.querySelector('#skills');
+    const skillsTitle = document.querySelector('#skills-title');
+    const skillsLists = document.querySelector('#skills-lists');
+    const aboutdescription = document.querySelector('#descrip-about');
     window.addEventListener('scroll', () => {
         const scrollwindow = window.scrollY;
-        let heightAbout = about.offsetHeight / 3;
-        let skillsHeight = skills.offsetHeight / 4;
-        let heightBanner = banner.offsetHeight / 2;
+        const heightAbout = about.offsetHeight / 3;
+        const skillsHeight = skills.offsetHeight / 4;
+        const heightBanner = banner.offsetHeight / 2;
         if(scrollwindow >= heightAbout){
             aboutdescription.style.animation = 'aboutscroll 3s forwards';
             aboutphoto.style.animation = 'photoscroll 2s forwards';
@@ -100,38 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
            burgerItem1.style.backgroundColor = '#fff';
            burgerItem2.style.backgroundColor = '#fff';
         };
-
-
         if(scrollwindow >= skillsHeight){
             skillsTitle.style.animation = 'animatedScroll 3s forwards';
             skillsLists.style.animation = 'animatedScroll 4s forwards';
         };
-        // if(scrollwindow >= heightBanner){
-        //     navStyle.width = '100%';
-        //     navStyle.backgroundColor = '#fff';
-        //     navStyle.display = 'flex';
-        //     navStyle.justifyContent = 'left';
-        //     navStyle.alignItems = 'center';
-        // }
-        // else{
-        //     navStyle.width = '100%';
-        //     navStyle.backgroundColor = 'none';
-        //     navStyle.display = 'flex';
-        //     navStyle.justifyContent = 'left';
-        //     navStyle.alignItems = 'center';
-        //     }
-
     })
     
 });
 
 function scrollAdaptive(){
     if (window.matchMedia("(max-width: 400px)").matches){
-        
         window.addEventListener('scroll', () => {
           const scrollwindow = window.scrollY;
           const banner = document.querySelector('#banner');
-          let heightBanner = banner.offsetHeight / 2;
+          const heightBanner = banner.offsetHeight / 2;
           if(scrollwindow >= heightBanner){
               navStyle.backgroundColor = '#fff';
               burgerItem2.style.backgroundColor = '#000';
@@ -139,37 +113,10 @@ function scrollAdaptive(){
               burgerItem.style.backgroundColor = '#000';
               burger.style.top = 'auto';
           }
-      
       });
           }
           else{
-              return
+              return;
           }
 }
 scrollAdaptive();
-// if (window.matchMedia("(max-width: 400px)").matches) {
-//     if(scrollwindow >= heightBanner){
-//         navStyle.width = '100%';
-//         navStyle.backgroundColor = '#fff';
-//         navStyle.top = 0;
-//         burgerItem2.style.backgroundColor = '#000';
-//         burgerItem1.style.backgroundColor = '#000';
-//         burgerItem.style.backgroundColor = '#000';
-//         navStyle.zIndex = '10';
-//         burger.style.top = 'auto';
-//         navStyle.height = '50px';
-//         navStyle.position = 'fixed';
-//         navStyle.display = 'flex';
-//         navStyle.justifyContent = 'left';
-//         navStyle.alignItems = 'center';
-//     }
-
-//   } 
-
-
-//   window.addEventListener('scroll', () => {
-//     const scrollwindow = window.scrollY;
-//     const banner = document.querySelector('#banner');
-//     let heightBanner = banner.offsetHeight / 2;
-
-// });
