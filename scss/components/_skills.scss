@@ -1,26 +1,36 @@
 .skills{
     display: flex;
-   background: $c-back;
+   background: rgb(170, 170, 170);
     flex-direction: column;
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
     color: #000;
     align-items: center;
+    .title{
+        margin-top: 150px;
+        color: #fff;
+    }
     .info{
-        margin-bottom: 50px;
+        margin-bottom: 130px;
         margin-top: 45px;
         text-align: left;
         .list{
             display: flex;
+            color: #fff;
             width: 500px;
+            align-items: center;
+            padding: 15px;
+            background: rgba(20, 20, 20, 0.788);
             justify-content: space-between;
             .item{
                 &::before{
                     width: 30px;
                     display: flex;
                     align-items: center;
+                    color: #000;
                     justify-content: center;
                     border: 2px solid #000;
+                    background: #fff;
                     transition: .3s;
-                    cursor: pointer;
                     height: 30px;
                     font-size: 15px;
                     border-radius: 100%;
@@ -28,12 +38,7 @@
                     font-family: 'icomoon';
                     // position: absolute;
                 }
-                &:hover::before{
-                    color: #fff;
-                    background: #000;
-                }
             }
-            cursor: pointer;
             font-weight: 500;
             letter-spacing: 2px;
             font-size: 20px;

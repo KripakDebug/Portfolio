@@ -8,9 +8,12 @@
   .projects {
     justify-content: center;
     display: flex;
-    flex-direction: column;
+   flex-wrap: wrap;
+   width: 80%;
     margin-bottom: 50px;
     .project {
+      margin: 15px 15px;
+      border: 3px solid rgb(24, 24, 24);
       .project__link {
         cursor: pointer;
         display: flex;
@@ -30,7 +33,6 @@
         position: relative;
         transition: 0.4s;
         width: 370px;
-        margin: 15px 15px;
         height: 200px;
         &:hover {
           .title-link {
@@ -52,7 +54,6 @@
           transition: 0.4s;
         }
         img {
-          border: 3px solid #000;
           width: inherit;
           height: inherit;
         }
@@ -61,13 +62,13 @@
   }
 }
 
-@media (max-width: 398px){
+@media (max-width: 450px){
    .works{
        .projects{
         .project{
             .project__link {
                 .title-link {
-                  font-size: 27px;
+                  font-size: 24px;
                 }
                 width: 320px;
                 height: 170px; 
@@ -76,17 +77,16 @@
        }
    }
 }
-@media (max-width: 398px){
+@media (max-width: 358px){
     .works{
         .projects{
          .project{
              .project__link {
-                margin: 10px 0px;
                  .title-link {
-                   font-size: 27px;
+                   font-size: 20px;
                  }
-                 width: 310px;
-                 height: 160px; 
+                 width: 300px;
+                 height: 150px; 
              }
          }
         }

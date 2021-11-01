@@ -90,10 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutphoto.style.animation = 'photoscroll 2s forwards';
         };
         if(scrollwindow >= heightBanner){
-           burger.style.position = 'fixed';
-           burgerItem.style.backgroundColor = 'grey';
-           burgerItem1.style.backgroundColor = 'grey';
-           burgerItem2.style.backgroundColor = 'grey';
+           burgerItem.style.border = '1px solid #000';
+           burgerItem1.style.border = '1px solid #000';
+           burgerItem2.style.border = '1px solid #000';
+           burgerItem.style.height = '4px';
+           burgerItem1.style.height = '4px';
+           burgerItem2.style.height = '4px';
+           burgerItem.style.backgroundColor = '#fff';
+           burgerItem1.style.backgroundColor = '#fff';
+           burgerItem2.style.backgroundColor = '#fff';
         };
 
 
@@ -101,20 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
             skillsTitle.style.animation = 'animatedScroll 3s forwards';
             skillsLists.style.animation = 'animatedScroll 4s forwards';
         };
-        if(scrollwindow >= heightBanner){
-            navStyle.width = '100%';
-            navStyle.backgroundColor = '#fff';
-            navStyle.display = 'flex';
-            navStyle.justifyContent = 'left';
-            navStyle.alignItems = 'center';
-        }
-        else{
-            navStyle.width = '100%';
-            navStyle.backgroundColor = 'none';
-            navStyle.display = 'flex';
-            navStyle.justifyContent = 'left';
-            navStyle.alignItems = 'center';
-            }
+        // if(scrollwindow >= heightBanner){
+        //     navStyle.width = '100%';
+        //     navStyle.backgroundColor = '#fff';
+        //     navStyle.display = 'flex';
+        //     navStyle.justifyContent = 'left';
+        //     navStyle.alignItems = 'center';
+        // }
+        // else{
+        //     navStyle.width = '100%';
+        //     navStyle.backgroundColor = 'none';
+        //     navStyle.display = 'flex';
+        //     navStyle.justifyContent = 'left';
+        //     navStyle.alignItems = 'center';
+        //     }
 
     })
     
@@ -128,19 +133,11 @@ function scrollAdaptive(){
           const banner = document.querySelector('#banner');
           let heightBanner = banner.offsetHeight / 2;
           if(scrollwindow >= heightBanner){
-              navStyle.width = '100%';
               navStyle.backgroundColor = '#fff';
-              navStyle.top = 0;
               burgerItem2.style.backgroundColor = '#000';
               burgerItem1.style.backgroundColor = '#000';
               burgerItem.style.backgroundColor = '#000';
-              navStyle.zIndex = '10';
               burger.style.top = 'auto';
-              navStyle.height = '50px';
-              navStyle.position = 'fixed';
-              navStyle.display = 'flex';
-              navStyle.justifyContent = 'left';
-              navStyle.alignItems = 'center';
           }
       
       });

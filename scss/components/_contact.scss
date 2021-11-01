@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background: rgb(71, 71, 71);
   align-items: center;
   .speech {
     margin-top: 100px;
@@ -15,33 +16,9 @@
   }
   .contact__content {
     display: flex;
-    margin-top: 170px;
-    .nav {
-      margin-right: 180px;
-      .link {
-        font-weight: 200;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        letter-spacing: 1.5px;
-        font-size: 27px;
-        list-style: outside;
-        &:first-child {
-          margin-top: 0px;
-          margin-bottom: 20px;
-          list-style: none;
-        }
-        margin: 13px 0px;
-        a {
-          text-decoration: none;
-          transition: 0.3s;
-          &:hover {
-            color: rgb(122, 122, 122);
-          }
-          font-size: 17px;
-          color: rgb(39, 38, 38);
-        }
-        color: rgb(39, 38, 38);
-      }
-    }
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px;
   }
   .info {
     display: flex;
@@ -58,17 +35,18 @@
           font-size: 25px;
           text-decoration: none;
           transition: 0.4s;
-          color: #000;
+          color: #fff;
           &:hover {
-            color: rgb(92, 91, 91);
+            color: rgb(199, 199, 199);
           }
         }
       }
     }
   }
   .info__title {
+    color: #fff;
     font-size: 30px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-weight: 200;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -105,9 +83,6 @@
   .contact {
     .contact__content {
       margin-top: 120px;
-      .nav {
-        margin-right: 100px;
-      }
     }
   }
 }
@@ -116,19 +91,8 @@
     .info__title {
       font-size: 25px;
     }
-    .speech {
-      margin-top: 80px;
-      width: 650px;
-      font-size: 22px;
-      margin-bottom: 40px;
-      line-height: 40px;
-      letter-spacing: 5.3px;
-    }
     .contact__content {
       margin-top: 100px;
-      .nav {
-        margin-right: 80px;
-      }
     }
   }
 }
@@ -137,19 +101,8 @@
     .info__title {
       font-size: 20px;
     }
-    .speech {
-      margin-top: 70px;
-      width: 600px;
-      font-size: 20px;
-      margin-bottom: 40px;
-      line-height: 37px;
-      letter-spacing: 5px;
-    }
     .contact__content {
       margin-top: 100px;
-      .nav {
-        margin-right: 80px;
-      }
     }
   }
 }
@@ -169,31 +122,8 @@
     .info__title {
       font-size: 18px;
     }
-    .speech {
-      margin-top: 60px;
-      width: 550px;
-      font-size: 19px;
-      margin-bottom: 30px;
-      line-height: 33px;
-      letter-spacing: 4px;
-    }
     .contact__content {
       margin-top: 100px;
-      .nav {
-        margin-right: 80px;
-        .link {
-          letter-spacing: 1.2px;
-          font-size: 19px;
-          &:first-child {
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
-          margin: 10px 0px;
-          a {
-            font-size: 15px;
-          }
-        }
-      }
     }
   }
 }
@@ -213,78 +143,33 @@
     .info__title {
       font-size: 18px;
     }
-    .speech {
-      margin-top: 50px;
-      width: 85%;
-      font-size: 18px;
-      margin-bottom: 20px;
-      line-height: 30px;
-      letter-spacing: 3.5px;
-    }
     .contact__content {
       margin-top: 50px;
-      .nav {
-        margin-right: 50px;
-        .link {
-          letter-spacing: 1.2px;
-          font-size: 18px;
-          &:first-child {
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
-          margin: 10px 0px;
-          a {
-            font-size: 14px;
-          }
-        }
-      }
     }
   }
 }
 @media (max-width: 496px) {
     .contact {
       .info {
-          margin-bottom: 40px;
+        width: 100%;
         .lists {
           .list {
             margin: 0px 15px;
-            margin-top: 15px;
+            margin-top: 25px;
             a {
-              font-size: 18px;
+              font-size: 15px;
             }
           }
         }
       }
       .info__title {
-        font-size: 16px;
-      }
-      .speech {
-        margin-top: 50px;
-        width: 85%;
         font-size: 18px;
-        margin-bottom: 20px;
-        line-height: 20px;
-        letter-spacing: 3px;
+        text-align: center;
       }
       .contact__content {
           flex-direction: column-reverse;
-        margin-top: 50px;
+        margin: 30px 0px;
         align-items: center;
-        .nav {
-          margin-right: 0px;
-          .link {
-            letter-spacing: 1.2px;
-            font-size: 18px;
-            &:first-child {
-              margin-top: 0px;
-              margin-bottom: 0px;
-            }
-            margin: 10px 0px;
-            a {
-              font-size: 14px;
-            }
-          }
-        }
       }
     }
   }

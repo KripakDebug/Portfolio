@@ -2,7 +2,7 @@
     display: flex;
     z-index: 1;
     position: relative;
-    background: $c-back;
+    background: $c-white;
     justify-content: center;
     align-items: center;
    .about__content {
@@ -25,15 +25,15 @@
            }
        }
        .paragraph{
-           font-size: 16px;
-           letter-spacing: 2.3px;
+           font-size: 20px;
+           letter-spacing: 1.3px;
            line-height: 30px;
-           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            width: 550px;
+            width: 700px;
        }
    }
    .photo{
     opacity: 0;
+    filter: drop-shadow(0px 0px 5px #000);
        cursor: pointer;
        img{
            border-radius: 100%;
@@ -63,7 +63,7 @@
         opacity: 1;
     }
 }
-@media (max-width: 1187px) {
+@media (max-width: 1287px) {
   .about{
     .description{
         margin-right: 55px;
@@ -71,8 +71,7 @@
             font-size: 28px;
         }
         .paragraph{
-            font-size: 16px;
-            letter-spacing: 2px;
+            font-size: 17px;
             line-height: 30px;
             width: 600px;
         }
@@ -93,8 +92,7 @@
               font-size: 25px;
           }
           .paragraph{
-              font-size: 14px;
-              letter-spacing: 2px;
+              font-size: 16px;
               line-height: 30px;
               width: 600px;
           }
@@ -119,8 +117,7 @@
               font-size: 25px;
           }
           .paragraph{
-              font-size: 14px;
-              letter-spacing: 2px;
+              font-size: 17px;
               line-height: 30px;
               width: 600px;
           }
@@ -142,10 +139,9 @@
               font-size: 23px;
           }
           .paragraph{
-              font-size: 14px;
-              letter-spacing: 2px;
+              font-size: 15px;
               line-height: 27px;
-              width: 95%;
+              width: 85%;
           }
       }
       .photo{
@@ -165,9 +161,8 @@
               font-size: 20px;
           }
           .paragraph{
-              font-size: 14px;
-              letter-spacing: 2px;
-              line-height: 23px;
+              font-size: 15px;
+              line-height: 20px;
               width: auto;
           }
       }
@@ -186,8 +181,7 @@
               font-size: 16px;
           }
           .paragraph{
-              font-size: 13px;
-              letter-spacing: 2px;
+              font-size: 14px;
               line-height: 20px;
               width: auto;
           }
@@ -208,8 +202,7 @@
               font-size: 15px;
           }
           .paragraph{
-              font-size: 12px;
-              letter-spacing: 2px;
+              font-size: 13px;
               line-height: 20px;
               width: auto;
           }
