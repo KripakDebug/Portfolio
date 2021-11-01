@@ -32,17 +32,35 @@ $c-white: #fff;
     background: $c-back;
 display: none;
 }
-.hidden{
-    overflow: hidden;
-}
-.body-shadow{
-    z-index: 3;
+.before{
     &::before{
         content: '';
         position: absolute;
-        z-index: 3;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.466);
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+}
+.hidden{
+    overflow: hidden;
+}
+.shadow {
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
+  }
+.body-shadow{
+   z-index: 10;
+   
+    &::before{
+        display: flex;
+        content: '';
+        position: absolute;
+        box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
         width: 100%;
         height: 100%;
+        z-index: 20;
         top: 0;
         bottom: 0;
         right: 0;

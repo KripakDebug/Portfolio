@@ -4,14 +4,18 @@ let panel = document.querySelector('.panel-links');
 let closepanel = document.querySelector('.close-btn');
 const preload = document.querySelector('#preload');
 const skills = document.querySelector('.skills');
+let banner = document.querySelector('#banner');
+let about = document.querySelector('#about');
+let works = document.querySelector('#works');
+let contact = document.querySelector('#contact')
 const nav = document.querySelector('.nav-wrapper');
-const body = document.body;
+let body = document.body;            
 let links = document.querySelectorAll('#link');
 const burgerItem = document.querySelector('#burgerItem');
 const burgerItem1 = document.querySelector('#burgerItem-1');
 const burgerItem2 = document.querySelector('#burgerItem-2');
 let navStyle = nav.style;
-const wrapper = document.querySelector('.wrapper');
+const wrapper = document.querySelector('#wrapper');
  function load(){
      myVar = setTimeout(hiding, 2000);
      myVar = setTimeout(showPage,3000);
@@ -58,6 +62,7 @@ burger.addEventListener('click', () => {
     panel.style.display = 'flex';
     body.classList.add('body-shadow');
     body.classList.add('hidden');
+
 });
 closepanel.addEventListener('click', () => {
     panel.style.display = 'none';
@@ -84,7 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutdescription.style.animation = 'aboutscroll 3s forwards';
             aboutphoto.style.animation = 'photoscroll 2s forwards';
         };
-        
+        if(scrollwindow >= heightBanner){
+           burger.style.position = 'fixed';
+           burgerItem.style.backgroundColor = 'grey';
+           burgerItem1.style.backgroundColor = 'grey';
+           burgerItem2.style.backgroundColor = 'grey';
+        };
+
+
         if(scrollwindow >= skillsHeight){
             skillsTitle.style.animation = 'animatedScroll 3s forwards';
             skillsLists.style.animation = 'animatedScroll 4s forwards';
