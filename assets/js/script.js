@@ -1,40 +1,40 @@
-let myVar;
+let preloadAdd;
 const burger = document.querySelector('.burger');
 const panel = document.querySelector('.panel-links');
 const closepanel = document.querySelector('.close-btn');
-const preload = document.querySelector('#preload');
-const banner = document.querySelector('#banner');
+const preload = document.getElementById('#preload');
+const banner = document.getElementById('#banner');
 const nav = document.querySelector('.nav-wrapper');
 const body = document.body;            
 const links = document.querySelectorAll('#link');
-const burgerItem = document.querySelector('#burgerItem');
-const burgerItem1 = document.querySelector('#burgerItem-1');
-const burgerItem2 = document.querySelector('#burgerItem-2');
+const burgerItem = document.getElementById('#burgerItem');
+const burgerItem1 = document.getElementById('#burgerItem-1');
+const burgerItem2 = document.getElementById('#burgerItem-2');
 const navStyle = nav.style;
-const wrapper = document.querySelector('#wrapper');
- function load(){
-     myVar = setTimeout(hiding, 2000);
-     myVar = setTimeout(showPage,3000);
-     myVar = setTimeout(hiding1, 3000);
-     myVar = setTimeout(showPage1, 4000);
-     myVar = setTimeout(load1, 4500);
+const wrapper = document.getElementById('#wrapper');
+ function loadPage(){
+    preloadAdd = setTimeout(appear, 2000);
+    preloadAdd = setTimeout(showPage,3000);
+    preloadAdd = setTimeout(hiding, 3000);
+    preloadAdd = setTimeout(DeletePage, 4000);
+    preloadAdd = setTimeout(load, 4500);
 }
-function showPage1(){
+function DeletePage(){
     document.getElementById("subtext").style.animation = "fadeout 1s ease";
 }
-function load1() {
+function load() {
     document.getElementById("preload").style.display = "none";
     document.getElementById("wrapper").style.display = "block";
     document.getElementById("wrapper").style.animation = "fadein 1s ease";
 }
-function hiding1(){
+function hiding(){
     document.getElementById("subtext").style.animation = "fadein 1s ease";
 }
 function showPage(){
     document.getElementById("text").style.display = "none";
 
 }
-function hiding(){
+function appear(){
     document.getElementById("text").style.animation = "fadeout 1s ease";
 }
 // Burger event to Bar
@@ -66,12 +66,12 @@ closepanel.addEventListener('click', () => {
 
 // Scroll animeted
 document.addEventListener('DOMContentLoaded', () => {
-    const about = document.querySelector('#about');
-    const aboutphoto = document.querySelector('#photo');
-    const skills = document.querySelector('#skills');
-    const skillsTitle = document.querySelector('#skills-title');
-    const skillsLists = document.querySelector('#skills-lists');
-    const aboutdescription = document.querySelector('#descrip-about');
+    const about = document.getElementById('#about');
+    const aboutphoto = document.getElementById('#photo');
+    const skills = document.getElementById('#skills');
+    const skillsTitle = document.getElementById('#skills-title');
+    const skillsLists = document.getElementById('#skills-lists');
+    const aboutdescription = document.getElementById('#descrip-about');
     window.addEventListener('scroll', () => {
         const scrollwindow = window.scrollY;
         const heightAbout = about.offsetHeight / 3;
